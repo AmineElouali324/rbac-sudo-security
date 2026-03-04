@@ -1,1 +1,11 @@
+Cmnd_Alias TS_SYSTEMCTL = \
+    /usr/bin/systemctl status *, \
+    /usr/bin/systemctl is-active *, \
+    /usr/bin/systemctl is-enabled *
 
+Cmnd_Alias TS_LOGS = \
+    /usr/bin/journalctl, \
+    /usr/bin/journalctl -u *, \
+    /usr/bin/journalctl -p err
+
+%techsupport ALL=(root) TS_SYSTEMCTL, TS_LOGS
