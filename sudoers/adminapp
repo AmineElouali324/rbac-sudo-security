@@ -1,0 +1,11 @@
+Cmnd_Alias APP_SERVICE_STATUS = \
+    /usr/bin/systemctl status custom-service.service
+
+Cmnd_Alias APP_SERVICE_CONTROL = \
+    /usr/bin/systemctl restart custom-service.service, \
+    /usr/bin/systemctl reload custom-service.service
+
+Cmnd_Alias APP_LOGS = \
+    /usr/bin/journalctl -u custom-service.service
+
+%adminapp ALL=(root) NOPASSWD: APP_SERVICE_STATUS, APP_SERVICE_CONTROL, APP_LOGS
