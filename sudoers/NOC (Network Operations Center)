@@ -1,0 +1,7 @@
+Cmnd_Alias NOC_SYSTEM_INFO = \
+    /usr/bin/df, \
+    /usr/bin/free, \
+    /usr/bin/uptime, \
+    /usr/bin/ss
+
+%noc ALL=(root) NOC_SYSTEM_INFO
